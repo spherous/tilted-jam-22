@@ -86,7 +86,7 @@ Transform:
   m_GameObject: {fileID: 7171415244063590555}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children: []
   m_Father: {fileID: 7171415244208487358}
   m_RootOrder: 0
@@ -151,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7171415244208487358}
   - component: {fileID: 7171415244208487356}
-  - component: {fileID: 7171415244208487359}
+  - component: {fileID: 5997704939214518988}
   - component: {fileID: 2683048131202921475}
   m_Layer: 0
   m_Name: Dinoship
@@ -198,8 +198,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &7171415244208487359
-CircleCollider2D:
+--- !u!60 &5997704939214518988
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -211,9 +211,23 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.07}
-  serializedVersion: 2
-  m_Radius: 0.49
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.007888943, y: 0.46024913}
+      - {x: -0.52121115, y: -0.17183004}
+      - {x: -0.0960674, y: -0.4666496}
+      - {x: 0.09590948, y: -0.46672875}
+      - {x: 0.52144825, y: -0.15258235}
 --- !u!114 &2683048131202921475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7171415244208487356}
-  cl: {fileID: 0}
+  cl: {fileID: 5997704939214518988}
   firePointLeft: {fileID: 9163482193174300640}
   firePointRight: {fileID: 6900928275565266675}
   laserPrefab: {fileID: 1276514050809375541, guid: 9f07dbe915edfe147b7589f8cced5c68,
