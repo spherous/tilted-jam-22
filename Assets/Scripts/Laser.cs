@@ -35,7 +35,7 @@ public class Laser : MonoBehaviour
 
     public void Fire() => fire = true;
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         IDamagable damagable = other.gameObject.GetComponent<IDamagable>();
         
@@ -45,4 +45,6 @@ public class Laser : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void SlowDown(float percent = 1f) => speed *= percent;
+
 }
