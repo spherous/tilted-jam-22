@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 419906}
   - component: {fileID: 3360490}
   - component: {fileID: 2340760}
+  - component: {fileID: 2084126902789508092}
   m_Layer: 0
   m_Name: SM_Veh_Satellite_07
   m_TagString: Untagged
@@ -79,3 +80,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2084126902789508092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacc0dbe714a19045aa0001ddb4b7652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x_rot_func: 1
+  y_rot_func: 1
+  z_rot_func: 1
+  rot_freq: {x: 1, y: 2, z: 1}
+  rot_amplitude: {x: 1, y: 2, z: 1}
+  rot_phase: {x: 1, y: 2, z: 1}
+  x_pos_func: 0
+  y_pos_func: 0
+  z_pos_func: 0
+  pos_freq: {x: 0, y: 0, z: 0}
+  pos_amplitude: {x: 0, y: 0, z: 0}
+  pos_phase: {x: 0, y: 0, z: 0}
