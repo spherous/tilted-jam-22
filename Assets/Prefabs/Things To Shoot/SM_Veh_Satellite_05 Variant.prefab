@@ -1,29 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &409407736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293350940998223200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bacc0dbe714a19045aa0001ddb4b7652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_rot_func: 1
-  y_rot_func: 1
-  z_rot_func: 1
-  rot_freq: {x: 1, y: 2, z: 1}
-  rot_amplitude: {x: 1, y: 2, z: 1}
-  rot_phase: {x: 1, y: 2, z: 1}
-  x_pos_func: 0
-  y_pos_func: 0
-  z_pos_func: 0
-  pos_freq: {x: 0, y: 0, z: 0}
-  pos_amplitude: {x: 0, y: 0, z: 0}
-  pos_phase: {x: 0, y: 0, z: 0}
 --- !u!50 &2084761903
 Rigidbody2D:
   serializedVersion: 4
@@ -71,6 +47,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.885734, y: 2.458542}
   m_EdgeRadius: 0
+--- !u!114 &409407736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293350940998223200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacc0dbe714a19045aa0001ddb4b7652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x_rot_func: 1
+  y_rot_func: 1
+  z_rot_func: 1
+  rot_freq: {x: 1, y: 2, z: 1}
+  rot_amplitude: {x: 1, y: 2, z: 1}
+  rot_phase: {x: 1, y: 2, z: 1}
+  x_pos_func: 0
+  y_pos_func: 0
+  z_pos_func: 0
+  pos_freq: {x: 0, y: 0, z: 0}
+  pos_amplitude: {x: 0, y: 0, z: 0}
+  pos_phase: {x: 0, y: 0, z: 0}
+--- !u!114 &1317159109337479663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293350940998223200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2704b168c234e4fae1b4ff409abbc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingHealth: 5
 --- !u!1001 &1293350940998336018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 474016, guid: 407b25a809300b843a7fee1fa4c4765e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: -1.36
       objectReference: {fileID: 0}
     - target: {fileID: 474016, guid: 407b25a809300b843a7fee1fa4c4765e, type: 3}
       propertyPath: m_LocalPosition.z

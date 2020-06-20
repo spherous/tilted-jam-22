@@ -61,6 +61,19 @@ MonoBehaviour:
   pos_freq: {x: 0, y: 0, z: 0}
   pos_amplitude: {x: 0, y: 0, z: 0}
   pos_phase: {x: 0, y: 0, z: 0}
+--- !u!114 &2470538304027242878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516310225357356943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2704b168c234e4fae1b4ff409abbc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingHealth: 5
 --- !u!1001 &1516310225357274777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +91,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 440494, guid: 6f9c3ae391a03764d96fc92f12f3f136, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 1.84
       objectReference: {fileID: 0}
     - target: {fileID: 440494, guid: 6f9c3ae391a03764d96fc92f12f3f136, type: 3}
       propertyPath: m_LocalPosition.z
