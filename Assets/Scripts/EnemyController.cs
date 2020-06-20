@@ -6,6 +6,9 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour, IDamagable, IHealth
 {
     GameManager gm => GameManager.Instance;
+    [SerializeField] private float speed;
+    private float strafeDirection = 1;
+    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Collider2D cl;
     [SerializeField] private GameObject laserPrefab;
     [SerializeField] private Transform firePoint;
@@ -20,6 +23,8 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
     {
         if(cl == null)
             cl = GetComponent<Collider2D>();
+        if(rb == null)
+            rb = GetComponent<Rigidbody2D>();
 
         FullHeal();
     }
@@ -33,6 +38,12 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
         }
 
         transform.up = -(gm.player.transform.position - transform.position).normalized;
+    }
+    private void LateUpdate() => Move();
+
+    private void Move()
+    {
+        rb.velocity = -transform.right * strafeDirection * speed;
     }
 
     private void Shoot()
@@ -57,4 +68,10 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
 
     public void GainHealth(int amount) => currentHealth = Mathf.Min(MaxHealth, CurrentHealth + amount);
     public void FullHeal() => currentHealth = MaxHealth;
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.GetComponent<Laser>() == null)
+            strafeDirection *= -1;
+    }
 }

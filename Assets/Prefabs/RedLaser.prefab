@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 711393631027815665}
   - component: {fileID: -2612688185019701135}
   m_Layer: 8
-  m_Name: Laser
+  m_Name: RedLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,8 +69,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000018626451, y: 0.2554258}
-  m_Size: {x: 0.062432222, y: 0.69962406}
+  m_Offset: {x: -0.0011563487, y: 0.2554258}
+  m_Size: {x: 0.041617624, y: 0.69962406}
   m_Direction: 0
 --- !u!114 &-2612688185019701135
 MonoBehaviour:
@@ -114,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 2873003128045112108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.299, z: 0}
-  m_LocalScale: {x: 0.53475, y: 3.3162498, z: 1}
+  m_LocalScale: {x: 0.26069063, y: 3.3162498, z: 1}
   m_Children: []
   m_Father: {fileID: 4975261257877464382}
   m_RootOrder: 0
@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6789412575448204680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.276, z: 0}
+  m_LocalPosition: {x: 0, y: 0.299, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4975261257877464382}
@@ -243,7 +243,7 @@ TrailRenderer:
   m_Time: 0.05
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.2
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
