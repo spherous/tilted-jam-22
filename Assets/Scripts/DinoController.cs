@@ -21,8 +21,7 @@ public class DinoController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(moveInput != Vector2.zero)
-            Move();
+        Move();
     }
 
     private void Move()
