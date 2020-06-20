@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AveaScene.unity
     guid: 6369ecf2f96675c42b73b436feac91db
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 5675714dc9bfcf5459c77459a3929428
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 8bab15c22f0ac764ca250aa73c492053
   m_configObjects: {}
