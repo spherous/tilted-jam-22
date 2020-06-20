@@ -6,7 +6,7 @@ using UnityEngine;
 public class DinoController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Collider2D collider;
+    [SerializeField] private Collider2D cl;
     [SerializeField] private Transform firePointLeft;
     [SerializeField] private Transform firePointRight;
     [SerializeField] private GameObject laserPrefab;
@@ -16,22 +16,21 @@ public class DinoController : MonoBehaviour
     private float nextAttackTime = 0;
     private Vector2 moveInput;
     private float rotateInput;
-    private bool shootInput;
+    private bool shootInput => Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0);
     private bool firePointToggle = false;
 
     void Start()
     {
         if(rb == null)
             rb = GetComponent<Rigidbody2D>();
-        if(collider == null)
-            collider = GetComponent<Collider2D>();
+        if(cl == null)
+            cl = GetComponent<Collider2D>();
     }
 
     void Update()
     {
-        moveInput = transform.up * Input.GetAxis("Vertical");
+        moveInput = (transform.up * Input.GetAxis("Vertical")) + ((-transform.right) * GetStrafeInput());
         rotateInput = -Input.GetAxis("Horizontal");
-        shootInput = Input.GetKey(KeyCode.Space);
 
         if(shootInput)
             Shoot();
@@ -45,7 +44,7 @@ public class DinoController : MonoBehaviour
                 ? Instantiate(laserPrefab, firePointLeft.position, firePointLeft.rotation)
                 : Instantiate(laserPrefab, firePointRight.position, firePointRight.rotation);
             
-            Physics2D.IgnoreCollision(collider, newGO.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(cl, newGO.GetComponent<Collider2D>());
 
             newGO?.GetComponent<Laser>()?.Fire();
 
@@ -57,6 +56,16 @@ public class DinoController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+    }
+
+    private float GetStrafeInput()
+    {
+        float val = 0;
+        if(Input.GetKey(KeyCode.Q))
+            val++;
+        if(Input.GetKey(KeyCode.E))
+            val--;
+        return val;
     }
 
     private void Move()
