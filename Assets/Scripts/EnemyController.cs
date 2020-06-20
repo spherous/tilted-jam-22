@@ -42,7 +42,7 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
         Laser laser = newGO?.GetComponent<Laser>();
         if(laser != null)
         {
-            laser.SlowDown(.25f);
+            laser.SlowDown(.45f);
             laser.Fire();
         }
     }
