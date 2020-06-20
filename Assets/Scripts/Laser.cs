@@ -33,4 +33,15 @@ public class Laser : MonoBehaviour
     }
 
     public void Fire() => fire = true;
+
+    private void OnCollisionEnter(Collision other)
+    {
+        IDamagable damagable = other.gameObject.GetComponent<IDamagable>();
+        
+        if(damagable != null)
+        {
+            damagable.TakeDamage();
+            Destroy(gameObject);
+        }
+    }
 }
