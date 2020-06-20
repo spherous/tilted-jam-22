@@ -59,7 +59,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 199318, guid: f6e85beca1ad315489207026744360b1, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Meteor_03
+      value: SM_Env_Meteor_03 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 422008, guid: f6e85beca1ad315489207026744360b1, type: 3}
       propertyPath: m_LocalPosition.x

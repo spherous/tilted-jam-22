@@ -69,7 +69,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127446, guid: bebcb6736dccbac4f87a6713ca1e7222, type: 3}
       propertyPath: m_Name
-      value: SM_Veh_Satellite_07
+      value: SM_Veh_Satellite_07 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 419906, guid: bebcb6736dccbac4f87a6713ca1e7222, type: 3}
       propertyPath: m_LocalPosition.x
