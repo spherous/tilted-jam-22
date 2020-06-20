@@ -38,7 +38,7 @@ public class SpaceObject : MonoBehaviour, IDamagable, IHealth {
     }
 
     private void Die() {
-        Destroy(this.gameObject, 0.5f);
+        Destroy(this.gameObject, 0f);
         // TODO: Add explosion
     }
 
