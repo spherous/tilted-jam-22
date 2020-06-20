@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DinoController : MonoBehaviour
+public class DinoController : MonoBehaviour, IDamagable, IHealth
 {
+    GameManager gm => GameManager.Instance;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Collider2D cl;
     [SerializeField] private Transform firePointLeft;
@@ -16,8 +17,15 @@ public class DinoController : MonoBehaviour
     private float nextAttackTime = 0;
     private Vector2 moveInput;
     private float rotateInput;
+
     private bool shootInput => Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0);
     private bool firePointToggle = false;
+
+    [SerializeField] private int maxHealth;
+    private int currentHealth;
+    public int MaxHealth {get {return maxHealth;} set{}}
+    public int CurrentHealth {get{return currentHealth;} set{}}
+
 
     void Start()
     {
@@ -25,6 +33,8 @@ public class DinoController : MonoBehaviour
             rb = GetComponent<Rigidbody2D>();
         if(cl == null)
             cl = GetComponent<Collider2D>();
+        
+        FullHeal();
     }
 
     void Update()
@@ -34,6 +44,9 @@ public class DinoController : MonoBehaviour
 
         if(shootInput)
             Shoot();
+
+        if(Input.GetKeyDown(KeyCode.G))
+            FullHeal();
     }
 
     private void Shoot()
@@ -73,4 +86,15 @@ public class DinoController : MonoBehaviour
         rb.velocity = moveInput * speed;
         rb.angularVelocity = rotateInput * rotateSpeed;
     }
+
+    public void TakeDamage(int amount) => LoseHealth(amount);
+    public void LoseHealth(int amount)
+    {
+        currentHealth = Mathf.Max(0, CurrentHealth - amount);
+        if(CurrentHealth == 0)
+            gm.EndGame();
+    }
+
+    public void GainHealth(int amount) => currentHealth = Mathf.Min(MaxHealth, CurrentHealth + amount);
+    public void FullHeal() => currentHealth = MaxHealth;
 }
