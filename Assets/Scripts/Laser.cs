@@ -7,6 +7,7 @@ public class Laser : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed = 20f;
     [SerializeField] private float lifeTime = 2f;
+    [SerializeField] private int damage = 1;
     private float timeToDestroy;
     
     private bool fire = false;
@@ -40,7 +41,7 @@ public class Laser : MonoBehaviour
         
         if(damagable != null)
         {
-            damagable.TakeDamage();
+            damagable.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
