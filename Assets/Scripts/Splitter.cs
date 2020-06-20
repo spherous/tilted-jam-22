@@ -21,10 +21,9 @@ public class Splitter : MonoBehaviour, IDamagable
         
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int amount)
     {
         Instantiate(halves[Random.Range(0, whole.Length - 1)], new Vector3(0, 0, 0), Quaternion.identity);
         Instantiate(halves[Random.Range(0, whole.Length - 1)], new Vector3(0, 0, 0), Quaternion.identity);
-        throw new System.NotImplementedException();
     }
 }
