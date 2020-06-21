@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountDownText: {fileID: 1357182084}
   NextScene: AveaScene
-  CountStart: 10
+  CountStart: 3
 --- !u!4 &199281420
 Transform:
   m_ObjectHideFlags: 0
