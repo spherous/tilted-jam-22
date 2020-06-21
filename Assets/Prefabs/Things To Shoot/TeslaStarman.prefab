@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x_rot_func: 0
   y_rot_func: 0
-  z_rot_func: 1
+  z_rot_func: 0
   rot_freq: {x: 0, y: 0, z: 1}
   rot_amplitude: {x: 0, y: 0, z: 1}
   rot_phase: {x: 0, y: 0, z: 0}
