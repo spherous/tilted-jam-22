@@ -88,7 +88,8 @@ MonoBehaviour:
   rb: {fileID: 8190056840031286218}
   audioSource: {fileID: 7244362368020100022}
   clips:
-  - {fileID: 8300000, guid: b99bc6acfb61dd045a9a2c770dc09ff6, type: 3}
+  - {fileID: 8300000, guid: 52f080d993429a14b871f929a589defc, type: 3}
+  - {fileID: 8300000, guid: c66324c6e9739214183357dde59bfd2c, type: 3}
   speed: 20
   lifeTime: 2
   damage: 1
@@ -104,7 +105,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
