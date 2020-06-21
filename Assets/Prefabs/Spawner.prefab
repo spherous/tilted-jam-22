@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 1293350940998223200, guid: f53bf5d9ee938414199e29ce21549a23, type: 3}
   - {fileID: 6993281849745980385, guid: bec50bd9b3bbf44168df5587565003e8, type: 3}
   - {fileID: 8262621345348013509, guid: d1cd4a1cdd47c574fa693cf5107dd83b, type: 3}
+  - {fileID: 189512, guid: aa838e476844e4c5eadd1d2f8d40b813, type: 3}
   SpawnRateInSeconds: 3
   IndexZeroSpanwChance: 0.5
   x_min: -10
