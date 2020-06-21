@@ -5,6 +5,8 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] clips;
     [SerializeField] private float speed = 20f;
     [SerializeField] private float lifeTime = 2f;
     [SerializeField] private int damage = 1;
@@ -33,7 +35,11 @@ public class Laser : MonoBehaviour
         }
     }
 
-    public void Fire() => fire = true;
+    public void Fire() 
+    {
+        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length - 1)]);
+        fire = true;
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
