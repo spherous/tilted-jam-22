@@ -5,15 +5,20 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-    [SerializeField] private GameObject endGameScreen;
+    [SerializeField] private GameObject WinScreen;
+    [SerializeField] private GameObject LoseScreen;
     private void Awake() 
     {
         Instance = this;
-        endGameScreen.SetActive(false);
+        LoseScreen.SetActive(false);
+        WinScreen.SetActive(false);
     }
 
-    public void EndGame()
+    public void EndGame(bool isWin = false)
     {
-        endGameScreen.SetActive(true);
+        if(isWin)
+            WinScreen.SetActive(true);
+        else
+            LoseScreen.SetActive(true);
     }
 }

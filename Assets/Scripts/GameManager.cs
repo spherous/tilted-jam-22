@@ -40,14 +40,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void EndGame()
+    public void EndGame(bool isWin = false)
     {
         Time.timeScale = 0;
-        ui?.EndGame();
+        ui?.EndGame(isWin);
     }
 
-    public void EndAfterTime()
+    public void EndAfterTime(bool isWin = false)
     {
-        Instantiate(endGameTimerPrefab);
+        Instantiate(endGameTimerPrefab).GetComponent<EndGameAfterTime>().isWin = isWin;
     }
 }

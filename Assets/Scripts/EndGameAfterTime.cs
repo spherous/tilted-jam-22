@@ -10,6 +10,7 @@ public class EndGameAfterTime : MonoBehaviour
     private float timeToEnd;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip deathSound;
+    public bool isWin = false;
 
     private void Start()
     {
@@ -19,6 +20,6 @@ public class EndGameAfterTime : MonoBehaviour
     private void Update()
     {
         if(Time.timeSinceLevelLoad >= timeToEnd)
-            gm.EndGame();
+            gm.EndGame(isWin);
     }
 }

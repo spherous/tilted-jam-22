@@ -92,7 +92,7 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
     private void Die()
     {
         if(isBoss)
-            gm.EndAfterTime();
+            gm.EndAfterTime(true);
         GameObject explosionGO = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Debug.Log("Created explosion " + explosionGO.name);
         Destroy(explosionGO, 1.0f);
