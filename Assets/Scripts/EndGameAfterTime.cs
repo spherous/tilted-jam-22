@@ -8,10 +8,13 @@ public class EndGameAfterTime : MonoBehaviour
 
     [SerializeField] private float timeToWait;
     private float timeToEnd;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip deathSound;
 
     private void Start()
     {
         timeToEnd = Time.timeSinceLevelLoad + timeToWait;    
+        audioSource?.PlayOneShot(deathSound);
     }
     private void Update()
     {

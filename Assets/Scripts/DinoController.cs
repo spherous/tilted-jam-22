@@ -29,7 +29,6 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
     public OnHealthChanged onHealthChanged;
 
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip hitSound;
 
     [SerializeField] private GameObject explosionPrefab;
@@ -123,7 +122,6 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
     }
     private void Die()
     {
-        audioSource?.PlayOneShot(deathSound);
         GameObject explosionGO = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Instantiate(endGameTimerPrefab);
         Destroy(explosionGO, 1.0f);
