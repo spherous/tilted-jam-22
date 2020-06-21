@@ -120,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4909942391378034106}
   - component: {fileID: 4909942391378034109}
+  - component: {fileID: 4109520110730206238}
   m_Layer: 0
   m_Name: MoonEmpty
   m_TagString: Untagged
@@ -166,6 +167,22 @@ MonoBehaviour:
   pos_freq: {x: 0, y: 0, z: 0}
   pos_amplitude: {x: 0, y: 0, z: 0}
   pos_phase: {x: 0, y: 0, z: 0}
+--- !u!54 &4109520110730206238
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909942391378034108}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4909942391572601568
 GameObject:
   m_ObjectHideFlags: 0
