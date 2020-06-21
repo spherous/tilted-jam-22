@@ -14,12 +14,29 @@ public class PowerUp : MonoBehaviour {
         if (other.gameObject.tag == "Player") {
             DinoController dinoController = other.gameObject.GetComponent<DinoController>();
             switch (type) {
+                case Type.Shield:
+                    // TODO: ADD SHIELD ABILITY
+                    break;
+                case Type.Speed:
+                    // TODO: ADD SPEED ABILITY
+                    break;
                 case Type.Heal:
                     dinoController.GainHealth(healthGainAmt);
                     break;
+                case Type.Weapon1:
+                    // TODO: ADD WEAPON 1 ABILITY
+                    break;
+                case Type.Weapon2:
+                    // TODO: ADD WEAPON 2 ABILITY
+                    break;
+                case Type.Weapon3:
+                    // TODO: ADD WEAPON 3 ABILITY
+                    break;                                                            
                 default:
+                    Debug.Log("No type selected");
                     break;
             }
+            Destroy(gameObject);
         }
     }
 }

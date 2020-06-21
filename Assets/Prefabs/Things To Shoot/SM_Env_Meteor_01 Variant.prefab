@@ -34,7 +34,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000019073486, y: 0.00000047683716}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 11.027586
 --- !u!114 &1575857317991722720
@@ -60,7 +60,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 102426, guid: ce8af7a83ab008349991e25370949b82, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Meteor_01
+      value: SM_Env_Meteor_01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 403696, guid: ce8af7a83ab008349991e25370949b82, type: 3}
       propertyPath: m_LocalPosition.x
