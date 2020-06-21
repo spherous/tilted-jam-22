@@ -43,7 +43,6 @@ public class SpaceObject : MonoBehaviour, IDamagable, IHealth {
 
     private void Die() {
         GameObject explosionGO = Instantiate(explosion, transform.position, Quaternion.identity);
-        Debug.Log("Created explosion " + explosionGO.name);
         Destroy(explosionGO, 1.0f);
         Destroy(this.gameObject, 0f);
     }
