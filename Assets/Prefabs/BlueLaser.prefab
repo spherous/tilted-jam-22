@@ -88,8 +88,7 @@ MonoBehaviour:
   rb: {fileID: 8190056840031286218}
   audioSource: {fileID: 7244362368020100022}
   clips:
-  - {fileID: 8300000, guid: 29aa8d504834b6b48852df61a9712739, type: 3}
-  - {fileID: 8300000, guid: 5a1c1fcacaa7f7e46a745288c037c180, type: 3}
+  - {fileID: 8300000, guid: b99bc6acfb61dd045a9a2c770dc09ff6, type: 3}
   speed: 20
   lifeTime: 2
   damage: 1

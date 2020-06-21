@@ -18,6 +18,10 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
     private int currentHealth;
     public int MaxHealth {get {return maxHealth;} set{}}
     public int CurrentHealth {get{return currentHealth;} set{}}
+    
+    [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip hitSound;
 
     private void Start()
     {
@@ -27,6 +31,7 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
             rb = GetComponent<Rigidbody2D>();
 
         FullHeal();
+        nextAttackTime = Time.timeSinceLevelLoad + timeBetweenAttacks;
     }
 
     private void Update()
@@ -63,7 +68,11 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
     {
         currentHealth = Mathf.Max(0, CurrentHealth - amount);
         if(CurrentHealth == 0)
-            Destroy(gameObject);
+        {
+            Die();
+            return;
+        }
+        audioSource.PlayOneShot(hitSound);
     }
 
     public void GainHealth(int amount) => currentHealth = Mathf.Min(MaxHealth, CurrentHealth + amount);
@@ -73,5 +82,13 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
     {
         if(other.gameObject.GetComponent<Laser>() == null)
             strafeDirection *= -1;
+    }
+
+    private void Die()
+    {
+        GameObject explosionGO = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Debug.Log("Created explosion " + explosionGO.name);
+        Destroy(explosionGO, 1.0f);
+        Destroy(this.gameObject, 0f);
     }
 }

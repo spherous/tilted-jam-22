@@ -31,6 +31,7 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip hitSound;
 
     void Start()
     {
@@ -104,7 +105,9 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
         {
             audioSource.PlayOneShot(deathSound);
             gm.EndGame();
+            return;
         }
+        audioSource.PlayOneShot(hitSound);
     }
 
     public void GainHealth(int amount)
