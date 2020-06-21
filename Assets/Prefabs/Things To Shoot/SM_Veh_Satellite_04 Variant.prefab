@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingHealth: 5
+  explosion: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
 --- !u!1001 &2738185000725709946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,7 +70,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 111264, guid: 65eb058c1d531b24ca01254b1b40577d, type: 3}
       propertyPath: m_Name
-      value: SM_Veh_Satellite_04 Variant
+      value: SM_Veh_Satellite_04
       objectReference: {fileID: 0}
     - target: {fileID: 448702, guid: 65eb058c1d531b24ca01254b1b40577d, type: 3}
       propertyPath: m_LocalPosition.x

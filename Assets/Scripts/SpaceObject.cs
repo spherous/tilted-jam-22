@@ -8,9 +8,13 @@ public class SpaceObject : MonoBehaviour, IDamagable, IHealth {
     public int CurrentHealth {get; set;}
 
     [SerializeField] int StartingHealth = 5;
+    [SerializeField] GameObject explosion;
 
     private void Awake() {
         MaxHealth = CurrentHealth = StartingHealth;
+        if (!explosion) {
+            Debug.Log("Missing explosion asset on " + gameObject.name);
+        }
     }
 
 
@@ -38,8 +42,10 @@ public class SpaceObject : MonoBehaviour, IDamagable, IHealth {
     }
 
     private void Die() {
+        GameObject explosionGO = Instantiate(explosion, transform.position, Quaternion.identity);
+        Debug.Log("Created explosion " + explosionGO.name);
+        Destroy(explosionGO, 1.0f);
         Destroy(this.gameObject, 0f);
-        // TODO: Add explosion
     }
 
 }

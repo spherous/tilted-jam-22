@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingHealth: 5
+  explosion: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
 --- !u!1001 &3018609161024674136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59,7 +60,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 102426, guid: ce8af7a83ab008349991e25370949b82, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Meteor_01 Variant
+      value: SM_Env_Meteor_01
       objectReference: {fileID: 0}
     - target: {fileID: 403696, guid: ce8af7a83ab008349991e25370949b82, type: 3}
       propertyPath: m_LocalPosition.x
