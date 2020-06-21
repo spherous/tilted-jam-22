@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class DinoController : MonoBehaviour, IDamagable, IHealth
 {
-    GameManager gm => GameManager.Instance;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Collider2D cl;
     [SerializeField] private Transform firePointLeft;
@@ -32,6 +31,9 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip hitSound;
+
+    [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private GameObject endGameTimerPrefab;
 
     void Start()
     {
@@ -103,8 +105,7 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
         onHealthChanged?.Invoke(CurrentHealth);
         if(CurrentHealth == 0)
         {
-            audioSource?.PlayOneShot(deathSound);
-            gm.EndGame();
+            Die();
             return;
         }
         audioSource?.PlayOneShot(hitSound);
@@ -119,5 +120,13 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
     {
         currentHealth = MaxHealth;
         onHealthChanged?.Invoke(CurrentHealth);
+    }
+    private void Die()
+    {
+        audioSource?.PlayOneShot(deathSound);
+        GameObject explosionGO = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Instantiate(endGameTimerPrefab);
+        Destroy(explosionGO, 1.0f);
+        Destroy(this.gameObject, 0f);
     }
 }

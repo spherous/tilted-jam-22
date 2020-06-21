@@ -36,6 +36,9 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
 
     private void Update()
     {
+        if(gm.player == null)
+            return;
+            
         if(Time.timeSinceLevelLoad >= nextAttackTime)
         {
             Shoot();

@@ -273,6 +273,9 @@ MonoBehaviour:
   audioSource: {fileID: 2120528659332472635}
   deathSound: {fileID: 8300000, guid: 25c7192356fb82241bcc940441f9f5d1, type: 3}
   hitSound: {fileID: 8300000, guid: cc255cab6bfadc144a0b8295cba9a8bf, type: 3}
+  explosionPrefab: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  endGameTimerPrefab: {fileID: 3043135307091396007, guid: 03ee8c4aec3a30e4f8d61f5cd7e7584d,
+    type: 3}
 --- !u!82 &2120528659332472635
 AudioSource:
   m_ObjectHideFlags: 0
