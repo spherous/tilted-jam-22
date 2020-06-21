@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     UIManager ui => UIManager.Instance;
     public DinoController player;
     [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private AudioSource audioSource;
 
     private void Awake()
     {
