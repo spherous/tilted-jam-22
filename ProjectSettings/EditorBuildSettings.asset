@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 8bab15c22f0ac764ca250aa73c492053
+  - enabled: 1
+    path: Assets/Scenes/CountDown.unity
+    guid: 48c04de34f2d5ed4ca56e451adc98b93
   m_configObjects: {}

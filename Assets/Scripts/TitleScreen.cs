@@ -38,6 +38,6 @@ public class TitleScreen : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene("AveaScene");
+        SceneManager.LoadScene("CountDown");
     }
 }
