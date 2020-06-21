@@ -100,24 +100,24 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
     public void LoseHealth(int amount)
     {
         currentHealth = Mathf.Max(0, CurrentHealth - amount);
-        onHealthChanged.Invoke(CurrentHealth);
+        onHealthChanged?.Invoke(CurrentHealth);
         if(CurrentHealth == 0)
         {
-            audioSource.PlayOneShot(deathSound);
+            audioSource?.PlayOneShot(deathSound);
             gm.EndGame();
             return;
         }
-        audioSource.PlayOneShot(hitSound);
+        audioSource?.PlayOneShot(hitSound);
     }
 
     public void GainHealth(int amount)
     {
         currentHealth = Mathf.Min(MaxHealth, CurrentHealth + amount);
-        onHealthChanged.Invoke(CurrentHealth);
+        onHealthChanged?.Invoke(CurrentHealth);
     }
     public void FullHeal()
     {
         currentHealth = MaxHealth;
-        onHealthChanged.Invoke(CurrentHealth);
+        onHealthChanged?.Invoke(CurrentHealth);
     }
 }
