@@ -90,6 +90,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 52f080d993429a14b871f929a589defc, type: 3}
   - {fileID: 8300000, guid: c66324c6e9739214183357dde59bfd2c, type: 3}
+  trail: {fileID: 2083887853260973990}
   speed: 20
   lifeTime: 2
   damage: 1

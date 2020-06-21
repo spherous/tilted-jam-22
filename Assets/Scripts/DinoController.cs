@@ -32,7 +32,6 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
     [SerializeField] private AudioClip hitSound;
 
     [SerializeField] private GameObject explosionPrefab;
-    [SerializeField] private GameObject endGameTimerPrefab;
 
     void Start()
     {
@@ -123,7 +122,7 @@ public class DinoController : MonoBehaviour, IDamagable, IHealth
     private void Die()
     {
         GameObject explosionGO = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        Instantiate(endGameTimerPrefab);
+        GameManager.Instance.EndAfterTime();
         Destroy(explosionGO, 1.0f);
         Destroy(this.gameObject, 0f);
     }

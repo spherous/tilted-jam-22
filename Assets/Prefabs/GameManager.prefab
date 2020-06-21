@@ -50,7 +50,11 @@ MonoBehaviour:
   player: {fileID: 0}
   playerPrefab: {fileID: 7171415244208487329, guid: bf873c803909b7047805b57866a622b8,
     type: 3}
-  audioSource: {fileID: 0}
+  bossPrefab: {fileID: 7645708381031109764, guid: 947f4bdb771fc3c4dbd7dee15dd07ea2,
+    type: 3}
+  bossSpawnDelay: 60
+  endGameTimerPrefab: {fileID: 3043135307091396007, guid: 03ee8c4aec3a30e4f8d61f5cd7e7584d,
+    type: 3}
 --- !u!114 &7092686354938037187
 MonoBehaviour:
   m_ObjectHideFlags: 0

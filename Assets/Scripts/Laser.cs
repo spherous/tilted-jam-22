@@ -7,6 +7,7 @@ public class Laser : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] clips;
+    [SerializeField] private TrailRenderer trail;
     [SerializeField] private float speed = 20f;
     [SerializeField] private float lifeTime = 2f;
     [SerializeField] private int damage = 1;
@@ -35,9 +36,11 @@ public class Laser : MonoBehaviour
         }
     }
 
-    public void Fire() 
+    public void Fire(float scale = 1) 
     {
         audioSource.PlayOneShot(clips[Random.Range(0, clips.Length - 1)]);
+        transform.localScale *= scale;
+        trail.widthMultiplier *= scale;
         fire = true;
     }
 

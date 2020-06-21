@@ -23,6 +23,8 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip hitSound;
 
+    [SerializeField] private bool isBoss = false;
+
     private void Start()
     {
         if(cl == null)
@@ -62,7 +64,7 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
         if(laser != null)
         {
             laser.SlowDown(.45f);
-            laser.Fire();
+            laser.Fire(transform.localScale.x);
         }
     }
 
@@ -89,6 +91,8 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
 
     private void Die()
     {
+        if(isBoss)
+            gm.EndAfterTime();
         GameObject explosionGO = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Debug.Log("Created explosion " + explosionGO.name);
         Destroy(explosionGO, 1.0f);

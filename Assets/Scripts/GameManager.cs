@@ -10,7 +10,11 @@ public class GameManager : MonoBehaviour
     UIManager ui => UIManager.Instance;
     public DinoController player;
     [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject bossPrefab;
+    private bool bossSpawned = false;
+    [SerializeField] private float bossSpawnDelay = 60f;
+    private float bossSpawnTime = 0;
+    [SerializeField] private GameObject endGameTimerPrefab;
 
     private void Awake()
     {
@@ -21,11 +25,29 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        bossSpawnTime = Time.timeSinceLevelLoad + bossSpawnDelay;
+    }
+
+    private void Update()
+    {
+        if(!bossSpawned)
+        {
+            if(Time.timeSinceLevelLoad >= bossSpawnTime)
+            {
+                Instantiate(bossPrefab, new Vector3(0,5,0), Quaternion.identity);
+                bossSpawned = true;
+            }
+        }
     }
 
     public void EndGame()
     {
         Time.timeScale = 0;
-        ui.EndGame();
+        ui?.EndGame();
+    }
+
+    public void EndAfterTime()
+    {
+        Instantiate(endGameTimerPrefab);
     }
 }

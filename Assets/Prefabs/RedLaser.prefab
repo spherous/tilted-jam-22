@@ -89,6 +89,7 @@ MonoBehaviour:
   audioSource: {fileID: 3616709084768358763}
   clips:
   - {fileID: 8300000, guid: b99bc6acfb61dd045a9a2c770dc09ff6, type: 3}
+  trail: {fileID: 2083887853260973990}
   speed: 20
   lifeTime: 2
   damage: 1
