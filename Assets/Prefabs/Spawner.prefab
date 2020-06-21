@@ -51,7 +51,7 @@ MonoBehaviour:
   - {fileID: 2738185000725690074, guid: 6f5449dd705e64bcba497afdf0f9bb7a, type: 3}
   - {fileID: 1293350940998223200, guid: f53bf5d9ee938414199e29ce21549a23, type: 3}
   - {fileID: 6993281849745980385, guid: bec50bd9b3bbf44168df5587565003e8, type: 3}
-  - {fileID: 8262621345348013509, guid: d1cd4a1cdd47c574fa693cf5107dd83b, type: 3}
+  - {fileID: 1611803808611037158, guid: 595ae7cc9c8bbcf46954917af2cbd97d, type: 3}
   SpawnRateInSeconds: 3
   IndexZeroSpanwChance: 0.5
   x_min: -10
