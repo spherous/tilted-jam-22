@@ -38,7 +38,7 @@ public class Laser : MonoBehaviour
 
     public void Fire(float scale = 1) 
     {
-        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length - 1)]);
+    audioSource.PlayOneShot(clips[Random.Range(0, clips.Length - 1)]);
         transform.localScale *= scale;
         trail.widthMultiplier *= scale;
         fire = true;

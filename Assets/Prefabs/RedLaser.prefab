@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &918386348074134767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6566850995327385700}
+  - component: {fileID: 9164967827154529075}
+  m_Layer: 0
+  m_Name: Audio Reverb Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6566850995327385700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918386348074134767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.29900002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4975261257877464382}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!167 &9164967827154529075
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918386348074134767}
+  m_Enabled: 1
+  m_MinDistance: 10
+  m_MaxDistance: 61.395008
+  m_ReverbPreset: 23
+  m_Room: -1000
+  m_RoomHF: -4000
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.1
+  m_Reflections: -449
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 1700
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!1 &1276514050809375541
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +68,10 @@ GameObject:
   - component: {fileID: 711393631027815665}
   - component: {fileID: -2612688185019701135}
   - component: {fileID: 3616709084768358763}
+  - component: {fileID: 5585633114452440286}
+  - component: {fileID: -8941273947422605476}
+  - component: {fileID: 7717602273450804791}
+  - component: {fileID: 5115820205375388539}
   m_Layer: 8
   m_Name: RedLaser
   m_TagString: Untagged
@@ -33,6 +92,7 @@ Transform:
   m_Children:
   - {fileID: 7155713771286684921}
   - {fileID: 712532027202413684}
+  - {fileID: 6566850995327385700}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88,7 +148,8 @@ MonoBehaviour:
   rb: {fileID: 8190056840031286218}
   audioSource: {fileID: 3616709084768358763}
   clips:
-  - {fileID: 8300000, guid: b99bc6acfb61dd045a9a2c770dc09ff6, type: 3}
+  - {fileID: 8300000, guid: f65a54e8182e9e346a9d95f0b3ff9bc2, type: 3}
+  - {fileID: 8300000, guid: 5c8ced8a9886d8d428323b64c3018940, type: 3}
   trail: {fileID: 2083887853260973990}
   speed: 20
   lifeTime: 2
@@ -104,19 +165,19 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.2
-  m_Pitch: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.26
+  m_Pitch: 1.2
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 3.68
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 200
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -124,23 +185,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.002
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.8630829
+      inSlope: -1.002004
+      outSlope: -1.002004
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -149,7 +210,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -164,7 +225,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -179,7 +240,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.48
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -189,6 +250,82 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!167 &5585633114452440286
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276514050809375541}
+  m_Enabled: 1
+  m_MinDistance: 2
+  m_MaxDistance: 8
+  m_ReverbPreset: 27
+  m_Room: -6415
+  m_RoomHF: -2500
+  m_DecayTime: 3.9
+  m_DecayHFRatio: 0.21
+  m_Reflections: -2780
+  m_ReflectionsDelay: 0.198
+  m_Reverb: -1434
+  m_ReverbDelay: 0.057
+  m_HFReference: 5000
+  m_Diffusion: 27
+  m_Density: 83
+  m_LFReference: 250
+  m_RoomLF: 0
+--- !u!168 &-8941273947422605476
+AudioEchoFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276514050809375541}
+  m_Enabled: 0
+  m_Delay: 23
+  m_DecayRatio: 1
+  m_WetMix: 1
+  m_DryMix: 0.4
+--- !u!169 &7717602273450804791
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276514050809375541}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.68943024
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!166 &5115820205375388539
+AudioChorusFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276514050809375541}
+  m_Enabled: 0
+  m_DryMix: 0.2
+  m_WetMix1: 0.4
+  m_WetMix2: 0.3
+  m_WetMix3: 0.5
+  m_Delay: 23
+  m_Rate: 0.3
+  m_Depth: 0.5
 --- !u!1 &2873003128045112108
 GameObject:
   m_ObjectHideFlags: 0

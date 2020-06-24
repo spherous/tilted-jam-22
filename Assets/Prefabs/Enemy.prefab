@@ -135,11 +135,12 @@ MonoBehaviour:
   laserPrefab: {fileID: 1276514050809375541, guid: a783eb9be6e71fb49a4917ed72815ca8,
     type: 3}
   firePoint: {fileID: 4898543982657683585}
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 2
   maxHealth: 3
   explosionPrefab: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   audioSource: {fileID: 7259594594221925543}
-  hitSound: {fileID: 8300000, guid: cc255cab6bfadc144a0b8295cba9a8bf, type: 3}
+  hitSound: {fileID: 8300000, guid: 42245c74b1819194396cf13b3e47b29e, type: 3}
+  isBoss: 0
 --- !u!82 &7259594594221925543
 AudioSource:
   m_ObjectHideFlags: 0
@@ -152,20 +153,20 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.696
+  m_Pitch: 1.67
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 4.96
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
+  Pan2D: 0.2
+  rolloffMode: 1
   BypassEffects: 0
-  BypassListenerEffects: 0
+  BypassListenerEffects: 1
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
@@ -211,7 +212,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -226,7 +227,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.489
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -77,7 +77,7 @@ public class EnemyController : MonoBehaviour, IDamagable, IHealth
             Die();
             return;
         }
-        audioSource.PlayOneShot(hitSound);
+        audioSource.PlayOneShot(hitSound, 0.2f);
     }
 
     public void GainHealth(int amount) => currentHealth = Mathf.Min(MaxHealth, CurrentHealth + amount);
