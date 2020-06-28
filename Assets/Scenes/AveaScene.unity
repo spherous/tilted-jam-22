@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -225,6 +225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1449425451077235384, guid: 7796769876ebd8a48869f35bee920b5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1575900350714417312, guid: 7796769876ebd8a48869f35bee920b5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -293,6 +298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546204362669475663, guid: 8f7161d71774319498de8123995d126b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7546204362669475665, guid: 8f7161d71774319498de8123995d126b,
         type: 3}
@@ -544,6 +554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EarthEmpty
       objectReference: {fileID: 0}
+    - target: {fileID: 4909942391988735107, guid: 4305ef74812f15d4688eb15317243cb8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4305ef74812f15d4688eb15317243cb8, type: 3}
 --- !u!1 &1580243035
@@ -777,6 +792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 297029501686600567, guid: 73f2ae95a260c854eae270ec24d00712,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3160485530184602311, guid: 73f2ae95a260c854eae270ec24d00712,
         type: 3}
