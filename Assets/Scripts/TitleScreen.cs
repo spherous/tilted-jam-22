@@ -9,12 +9,14 @@ public class TitleScreen : MonoBehaviour
     [SerializeField] private Button quitButton;
     [SerializeField] private Button creditsButton;
     [SerializeField] private Button emailButton;
+    [SerializeField] private Button galleryButton;
 
     private void Awake() {
         startButton.onClick.AddListener(StartGame);
         quitButton.onClick.AddListener(QuitGame);
         creditsButton.onClick.AddListener(Credits);
         emailButton.onClick.AddListener(Email);
+        galleryButton.onClick.AddListener(Gallery);
     }
 
     private void Email()
@@ -39,5 +41,10 @@ public class TitleScreen : MonoBehaviour
     private void StartGame()
     {
         SceneManager.LoadScene("CountDown");
+    }
+
+    private void Gallery()
+    {
+        SceneManager.LoadScene("BenConceptArt");
     }
 }
