@@ -139,7 +139,11 @@ MonoBehaviour:
   maxHealth: 3
   explosionPrefab: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   audioSource: {fileID: 7259594594221925543}
+<<<<<<< Updated upstream
   hitSound: {fileID: 8300000, guid: 42245c74b1819194396cf13b3e47b29e, type: 3}
+=======
+  hitSound: {fileID: 8300000, guid: cc255cab6bfadc144a0b8295cba9a8bf, type: 3}
+>>>>>>> Stashed changes
   isBoss: 0
 --- !u!82 &7259594594221925543
 AudioSource:
@@ -150,7 +154,8 @@ AudioSource:
   m_GameObject: {fileID: 7645708381031109764}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -9165342495767920908, guid: 1642428b5488a4e2cb9cfa12335750d7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.696

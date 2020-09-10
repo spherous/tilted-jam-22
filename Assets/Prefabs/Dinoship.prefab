@@ -275,7 +275,11 @@ MonoBehaviour:
   timeBetweenAttacks: 0.15
   maxHealth: 10
   audioSource: {fileID: 2120528659332472635}
+<<<<<<< Updated upstream
   hitSound: {fileID: 8300000, guid: 017a20e38b499324888df11690fad7c9, type: 3}
+=======
+  hitSound: {fileID: 8300000, guid: cc255cab6bfadc144a0b8295cba9a8bf, type: 3}
+>>>>>>> Stashed changes
   explosionPrefab: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
 --- !u!82 &2120528659332472635
 AudioSource:
@@ -286,6 +290,7 @@ AudioSource:
   m_GameObject: {fileID: 7171415244208487329}
   m_Enabled: 1
   serializedVersion: 4
+<<<<<<< Updated upstream
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6505a89193c9e6445af52aa718e7f0d5, type: 3}
   m_PlayOnAwake: 1
@@ -596,6 +601,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 01bd9b9008576445ba6908b975755cc1, type: 3}
+=======
+  OutputAudioMixerGroup: {fileID: -9165342495767920908, guid: 1642428b5488a4e2cb9cfa12335750d7,
+    type: 2}
+  m_audioClip: {fileID: 0}
+>>>>>>> Stashed changes
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
