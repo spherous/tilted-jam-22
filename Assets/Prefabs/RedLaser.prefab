@@ -90,7 +90,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: b99bc6acfb61dd045a9a2c770dc09ff6, type: 3}
   trail: {fileID: 2083887853260973990}
-  speed: 20
+  speed: 25
   lifeTime: 2
   damage: 1
 --- !u!82 &3616709084768358763
@@ -102,7 +102,8 @@ AudioSource:
   m_GameObject: {fileID: 1276514050809375541}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7062661837806147184, guid: 1642428b5488a4e2cb9cfa12335750d7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.2
